@@ -1,0 +1,59 @@
+# HRMS Lite – Backend
+
+Production-ready REST API for HRMS Lite built using Node.js, Express, and MongoDB.
+
+---
+
+## 🚀 Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB (Atlas)
+- Mongoose
+- Zod (Validation)
+- CORS
+- Morgan
+
+---
+
+## 📁 Project Structure
+
+src/
+│
+├── config/ # Database configuration
+├── controllers/ # Route handlers
+├── services/ # Business logic layer
+├── models/ # Mongoose models
+├── routes/ # API routes
+├── middlewares/ # Validation & error handling
+├── validations/ # Zod schemas
+└── app.js # Express app setup
+
+server.js # Entry point
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+
+npm install
+
+EMPLOYEES
+
+| Method | Endpoint             | Description                      |
+| ------ | -------------------- | -------------------------------- |
+| POST   | /api/employees       | Create employee                  |
+| GET    | /api/employees       | Get all employees                |
+| GET    | /api/employees/stats | Get employees with present count |
+| DELETE | /api/employees/:id   | Delete employee                  |
+
+ATTENDANCE
+
+| Method | Endpoint                    | Description                 |
+| ------ | --------------------------- | --------------------------- |
+| POST   | /api/attendance             | Mark attendance             |
+| GET    | /api/attendance/:employeeId | Get attendance (filterable) |
+
+DASHBOARD
+
+| Method | Endpoint               | Description     |
+| ------ | ---------------------- | --------------- |
+| GET    | /api/dashboard/summary | Dashboard stats |
