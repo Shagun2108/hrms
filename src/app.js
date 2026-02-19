@@ -16,7 +16,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://hrms-assignment.vercel.app"
+      "https://hrms-frontends-pearl.vercel.app"
     ],
   })
 );
